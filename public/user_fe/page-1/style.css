@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+
+.left-slide{
+    background: linear-gradient(180deg, #176b87 -0%, #76d8f9 100%);
+    background-size: 100% 100%; 
+    min-height: 120vh;
+}
+
+.left-slide img{ 
+    height: 500px;
+    margin-top: 100px; 
+}
+
+
+@media only screen and (max-width: 767px) {
+    .left-slide{
+        display: none;
+    }
+}
+
+.right-slide{
+    padding: 120px;
+    font-family: 'Poppins';
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remember-label {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.remember-label input[type="checkbox"] {
+  zoom: 2.5;
+
+}
+.col input {
+  margin-right: 0.5rem; 
+  justify-content: center;
+}
+
+.forgot-password {
+  margin-left: 1rem;
+  color: #176b87;
+  cursor: pointer;
+}
+
+body {
+  background: #f5f5f5;
+  margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ui-w-80 {
+  width: 80px !important;
+  height: auto;
+}
+
+.btn-default {
+  border-color: rgba(24, 28, 33, 0.1);
+  background: rgba(0, 0, 0, 0);
+  color: #4E5155;
+}
+
+label.btn {
+  margin-bottom: 0;
+}
+
+.btn-outline-primary {
+  border-color: #176b87;
+  background: transparent;
+  color: #176b87;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.text-light {
+  color: #babbbc !important;
+}
+
+.card {
+  background-clip: padding-box;
+  box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+  overflow: hidden;
+}
+
+.account-settings-fileinput {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.account-settings-links .list-group-item.active {
+  font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+  background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+  width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item,
+.material-style .account-settings-links .list-group-item,
+.dark-style .account-settings-links .list-group-item {
+  padding: 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active,
+.material-style .account-settings-links .list-group-item.active,
+.dark-style .account-settings-links .list-group-item.active {
+  color: #4e5155 !important;
+}
+
+/* Aturan baru untuk tombol Show/Hide Password */
+.form-group {
+  position: relative;
+  margin-bottom: 1rem; /* Memberikan ruang antar elemen */
+}
+
+.btn-toggle-password {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px; /* Sesuaikan jarak dari kanan sesuai kebutuhan */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-profile {
+  padding: 80px 0;
+  /* Other styles for user profile section */
+}
+
+.user-profile-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* .profile-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+} */
+
+.profile-image img{
+  border-radius: 50%;
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-profile-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.user-profile-card p {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+
+.user-profile-card .row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.user-profile-card .col-md-4 {
+  flex: 0 0 auto;
+  margin-right: 20px; 
+}
+
+.user-profile-card .col-md-4 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0; /* Hilangkan margin bawah untuk mengikuti teks */
+}
+
+.user-profile-card .col-md-8 {
+  flex: 1;
+}
+
+
+/* Responsiveness untuk layar yang lebih kecil */
+@media only screen and (max-width: 768px) {
+  .user-profile-card .row {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .user-profile-card .col-md-4 {
+      margin-bottom: 20px; /* Atur jarak antara gambar dan teks pada layar kecil */
+  }
+}
+
+body {
+  background: #f5f5f5;
+  margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ui-w-80 {
+  width: 80px !important;
+  height: auto;
+}
+
+.btn-default {
+  border-color: rgba(24, 28, 33, 0.1);
+  background: rgba(0, 0, 0, 0);
+  color: #4E5155;
+}
+
+label.btn {
+  margin-bottom: 0;
+}
+
+.btn-outline-primary {
+  border-color: #26B4FF;
+  background: transparent;
+  color: #26B4FF;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.text-light {
+  color: #babbbc !important;
+}
+
+.btn-facebook {
+  border-color: rgba(0, 0, 0, 0);
+  background: #3B5998;
+  color: #fff;
+}
+
+.btn-instagram {
+  border-color: rgba(0, 0, 0, 0);
+  background: #000;
+  color: #fff;
+}
+
+.card {
+  background-clip: padding-box;
+  box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+  overflow: hidden;
+}
+
+.account-settings-fileinput {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.account-settings-links .list-group-item.active {
+  font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+  background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+  width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item,
+.material-style .account-settings-links .list-group-item,
+.dark-style .account-settings-links .list-group-item {
+  padding: 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active,
+.material-style .account-settings-links .list-group-item.active,
+.dark-style .account-settings-links .list-group-item.active {
+  color: #4e5155 !important;
+}
+
+/* Aturan baru untuk tombol Show/Hide Password */
+.form-group {
+  position: relative;
+  margin-bottom: 1rem; /* Memberikan ruang antar elemen */
+}
+
+.btn-toggle-password {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px; /* Sesuaikan jarak dari kanan sesuai kebutuhan */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+
+.left-slide{
+    background: linear-gradient(180deg, #176b87 -0%, #76d8f9 100%);
+    background-size: 100% 100%; 
+    min-height: 120vh;
+}
+
+.left-slide img{ 
+    height: 500px;
+    margin-top: 100px; 
+}
+
+
+@media only screen and (max-width: 767px) {
+    .left-slide{
+        display: none;
+    }
+}
+
+.right-slide{
+    padding: 120px;
+    font-family: 'Poppins';
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remember-label {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.remember-label input[type="checkbox"] {
+  zoom: 2.5;
+
+}
+.col input {
+  margin-right: 0.5rem; 
+  justify-content: center;
+}
+
+.forgot-password {
+  margin-left: 1rem;
+  color: #176b87;
+  cursor: pointer;
+}
+
+body {
+  background: #f5f5f5;
+  margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ui-w-80 {
+  width: 80px !important;
+  height: auto;
+}
+
+.btn-default {
+  border-color: rgba(24, 28, 33, 0.1);
+  background: rgba(0, 0, 0, 0);
+  color: #4E5155;
+}
+
+label.btn {
+  margin-bottom: 0;
+}
+
+.btn-outline-primary {
+  border-color: #176b87;
+  background: transparent;
+  color: #176b87;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.text-light {
+  color: #babbbc !important;
+}
+
+.card {
+  background-clip: padding-box;
+  box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+  overflow: hidden;
+}
+
+.account-settings-fileinput {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.account-settings-links .list-group-item.active {
+  font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+  background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+  width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item,
+.material-style .account-settings-links .list-group-item,
+.dark-style .account-settings-links .list-group-item {
+  padding: 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active,
+.material-style .account-settings-links .list-group-item.active,
+.dark-style .account-settings-links .list-group-item.active {
+  color: #4e5155 !important;
+}
+
+/* Aturan baru untuk tombol Show/Hide Password */
+.form-group {
+  position: relative;
+  margin-bottom: 1rem; /* Memberikan ruang antar elemen */
+}
+
+.btn-toggle-password {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px; /* Sesuaikan jarak dari kanan sesuai kebutuhan */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-profile {
+  padding: 80px 0;
+  /* Other styles for user profile section */
+}
+
+.user-profile-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* .profile-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+} */
+
+.profile-image img{
+  border-radius: 50%;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-profile-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.user-profile-card p {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+
+.user-profile-card .row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.user-profile-card .col-md-4 {
+  flex: 0 0 auto;
+  margin-right: 20px; 
+}
+
+.user-profile-card .col-md-4 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0; /* Hilangkan margin bawah untuk mengikuti teks */
+}
+
+.user-profile-card .col-md-8 {
+  flex: 1;
+}
+
+
+/* Responsiveness untuk layar yang lebih kecil */
+@media only screen and (max-width: 768px) {
+  .user-profile-card .row {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .user-profile-card .col-md-4 {
+      margin-bottom: 20px; /* Atur jarak antara gambar dan teks pada layar kecil */
+  }
+}
+
+body {
+  background: #f5f5f5;
+  margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ui-w-80 {
+  width: 80px !important;
+  height: auto;
+}
+
+.btn-default {
+  border-color: rgba(24, 28, 33, 0.1);
+  background: rgba(0, 0, 0, 0);
+  color: #4E5155;
+}
+
+label.btn {
+  margin-bottom: 0;
+}
+
+.btn-outline-primary {
+  border-color: #26B4FF;
+  background: transparent;
+  color: #26B4FF;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.text-light {
+  color: #babbbc !important;
+}
+
+.btn-facebook {
+  border-color: rgba(0, 0, 0, 0);
+  background: #3B5998;
+  color: #fff;
+}
+
+.btn-instagram {
+  border-color: rgba(0, 0, 0, 0);
+  background: #000;
+  color: #fff;
+}
+
+.card {
+  background-clip: padding-box;
+  box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+  overflow: hidden;
+}
+
+.account-settings-fileinput {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.account-settings-links .list-group-item.active {
+  font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+  background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+  width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item,
+.material-style .account-settings-links .list-group-item,
+.dark-style .account-settings-links .list-group-item {
+  padding: 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active,
+.material-style .account-settings-links .list-group-item.active,
+.dark-style .account-settings-links .list-group-item.active {
+  color: #4e5155 !important;
+}
+
+/* Aturan baru untuk tombol Show/Hide Password */
+.form-group {
+  position: relative;
+  margin-bottom: 1rem; /* Memberikan ruang antar elemen */
+}
+
+.btn-toggle-password {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px; /* Sesuaikan jarak dari kanan sesuai kebutuhan */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
